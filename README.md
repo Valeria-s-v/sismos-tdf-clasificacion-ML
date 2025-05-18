@@ -1,57 +1,76 @@
-Clasificación de Sismos
-==============================
 
-Clasificación de eventos sísmicos
+# 🌍 Proyecto de Clasificación Binaria de Sismos en Tierra del Fuego
 
-Project Organization
-------------
+Este proyecto tiene como objetivo desarrollar un modelo de aprendizaje automático que permita clasificar eventos sísmicos registrados en la región de Tierra del Fuego, Argentina, en dos categorías: **significativos** (ML ≥ 4.5) y **no significativos**, a partir de características geográficas y técnicas.
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+## 📌 Objetivo General
 
+Construir un modelo de clasificación binaria que, a partir de datos sísmicos reales, determine si un sismo debe considerarse significativo según su magnitud local (ML) y otros parámetros.
 
---------
+## ⚙️ Herramientas y tecnologías utilizadas
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+- Python 3.x
+- Google Colab
+- Pandas, NumPy, Matplotlib, Seaborn
+- Scikit-learn (para el modelado)
+- Tabula-py (para extracción de datos desde PDF)
+- Git y GitHub (para control de versiones)
+
+## 📁 Estructura del proyecto
+
+```
+📦sismo-clasificador
+ ┣ 📂data
+ ┃ ┣ 📄sismos_original.pdf
+ ┃ ┣ 📄sismos_completo.xlsx
+ ┃ ┗ 📄sismos_preprocesado.csv
+ ┣ 📂notebooks
+ ┃ ┗ 📄01_extraccion_y_preparacion.ipynb
+ ┣ 📂models
+ ┃ ┗ 📄modelo_final.pkl
+ ┣ 📂reports
+ ┃ ┗ 📄informe_final.pdf
+ ┣ 📄README.md
+ ┗ 📄requirements.txt
+```
+
+## 📊 Dataset
+
+Los datos fueron extraídos del sitio oficial del Instituto Nacional de Prevención Sísmica (INPRES). La extracción se realizó desde un archivo PDF con registros detallados de eventos sísmicos en la región.
+
+Características del dataset:
+- Fecha y hora del evento
+- Coordenadas geográficas (latitud y longitud)
+- Profundidad
+- Magnitud local (ML)
+- Otros datos técnicos complementarios
+
+## 🧠 Enfoque del proyecto
+
+1. **Extracción y limpieza de datos** desde PDF (usando `tabula-py`)
+2. **Preprocesamiento**: conversión de tipos, limpieza, creación de variable objetivo (0 = No significativo, 1 = Significativo)
+3. **Exploración y visualización** de datos
+4. **Entrenamiento de modelos**: SVM, Regresión Logística, Random Forest
+5. **Evaluación**: matriz de confusión, accuracy, precision, recall
+6. **Conclusiones y recomendaciones**
+
+## 🔄 Estado del proyecto
+
+- [x] Extracción del dataset desde PDF
+- [x] Conversión y guardado como Excel
+- [ ] Limpieza y preprocesamiento
+- [ ] Visualización de datos
+- [ ] Modelado y evaluación
+- [ ] Redacción del informe final
+
+## 📌 Próximos pasos
+
+- Eliminar valores faltantes y corregir tipos de datos
+- Crear la variable objetivo binaria basada en ML
+- Aplicar técnicas de visualización geográfica
+- Comparar al menos dos algoritmos de clasificación
+- Documentar los resultados y subir los modelos
+
+## 📜 Licencia
+
+Proyecto educativo desarrollado como parte de la cursada de **Aprendizaje Automático** en la Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial – Politécnico Malvinas Argentinas, Tierra del Fuego.
