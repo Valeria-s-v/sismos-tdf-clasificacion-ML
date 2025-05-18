@@ -36,14 +36,24 @@ Construir un modelo de clasificación binaria que, a partir de datos sísmicos r
 
 ## 📊 Dataset
 
-Los datos fueron extraídos del sitio oficial del Instituto Nacional de Prevención Sísmica (INPRES). La extracción se realizó desde un archivo PDF con registros detallados de eventos sísmicos en la región.
+Los datos fueron extraídos desde el documento oficial del Instituto Nacional de Prevención Sísmica (INPRES), y procesados manualmente mediante herramientas de Python.
 
-Características del dataset:
-- Fecha y hora del evento
+### 📄 Fuente de los datos
+
+El dataset fue generado a partir de la extracción de tablas del siguiente documento oficial:
+
+📁 [`data/catalogo_sismico_INPRES_2021_2024.pdf`](data/catalogo_sismico_INPRES_2021_2024.pdf)
+
+Este archivo es el complemento 2021-2024 del Catálogo Sismológico de Referencia de Tierra del Fuego, elaborado por instituciones científicas de Argentina y Chile.
+
+Los datos incluyen:
+- Fecha y hora de origen
 - Coordenadas geográficas (latitud y longitud)
-- Profundidad
+- Profundidad del evento
 - Magnitud local (ML)
-- Otros datos técnicos complementarios
+- Calidad del evento y agencia de cálculo
+
+  
 
 ## 🧠 Enfoque del proyecto
 
