@@ -1,86 +1,93 @@
 
 # 🌍 Proyecto de Clasificación Binaria de Sismos en Tierra del Fuego
 
-Este proyecto tiene como objetivo desarrollar un modelo de aprendizaje automático que permita clasificar eventos sísmicos registrados en la región de Tierra del Fuego, Argentina, en dos categorías: **significativos** (ML ≥ 4.5) y **no significativos**, a partir de características geográficas y técnicas.
+Este proyecto tiene como objetivo desarrollar un modelo de aprendizaje automático que permita clasificar eventos sísmicos registrados en la región de Tierra del Fuego, Argentina, en dos categorías: **significativos** (percibidos o con impacto) y **no significativos**, a partir de características geográficas y técnicas.
 
 ## 📌 Objetivo General
 
-Construir un modelo de clasificación binaria que, a partir de datos sísmicos reales, determine si un sismo debe considerarse significativo según su magnitud local (ML) y otros parámetros.
+Desarrollar un modelo de clasificación binaria capaz de identificar si un evento sísmico puede ser percibido por la población o tener impacto, utilizando variables como magnitud, profundidad, distancia a centros urbanos y características temporales.
+
+## 🎯 Objetivos Específicos
+
+- Recolectar y limpiar datos sísmicos históricos de Tierra del Fuego.
+- Calcular la distancia epicentral a las ciudades principales (Ushuaia, Río Grande, Tolhuin).
+- Generar la variable binaria "percibido" en función de magnitud y distancia.
+- Incorporar variables temporales como día, mes y hora.
+- Evaluar distintos algoritmos de clasificación y comparar su rendimiento.
+- Comunicar los resultados con visualizaciones e indicadores clave.
 
 ## ⚙️ Herramientas y tecnologías utilizadas
 
 - Python 3.x
-- Google Colab
+- Google Colab / Jupyter Notebook
 - Pandas, NumPy, Matplotlib, Seaborn
-- Scikit-learn (para el modelado)
-- Tabula-py (para extracción de datos desde PDF)
-- Git y GitHub (para control de versiones)
+- Scikit-learn
+- XGBoost
+- Tabula-py (extracción de PDF)
+- Git y GitHub
 
 ## 📁 Estructura del proyecto
 
 ```
-📦sismo-clasificador
+📦sismos-tdf-clasificacion-ML
  ┣ 📂data
  ┃ ┣ 📄sismos_original.pdf
  ┃ ┣ 📄sismos_completo.xlsx
- ┃ ┗ 📄sismos_preprocesado.csv
+ ┃ ┗ 📄sismos_completo.csv
  ┣ 📂notebooks
- ┃ ┗ 📄01_extraccion_y_preparacion.ipynb
+ ┃ ┗ 📄sismos-tdf-clasificacion-ML.ipynb
  ┣ 📂models
  ┃ ┗ 📄modelo_final.pkl
  ┣ 📂reports
- ┃ ┗ 📄informe_final.pdf
+ ┃ ┗ 📄Entrega1_Clasificacion_Sismos_TDF_ValeriaVillegas.pdf
+ ┣ 📂docs
+ ┣ 📂references
+ ┣ 📂src
  ┣ 📄README.md
  ┗ 📄requirements.txt
 ```
 
 ## 📊 Dataset
 
-Los datos fueron extraídos desde el documento oficial del Instituto Nacional de Prevención Sísmica (INPRES), y procesados manualmente mediante herramientas de Python.
+Los datos provienen del documento oficial del Instituto Nacional de Prevención Sísmica (INPRES), complementado con cálculos geográficos y variables derivadas para enriquecer el análisis.
 
-### 📄 Fuente de los datos
+### Fuente:
 
-El dataset fue generado a partir de la extracción de tablas del siguiente documento oficial:
-
-📁 [`data/catalogo_sismico_INPRES_2021_2024.pdf`](data/catalogo_sismico_INPRES_2021_2024.pdf)
-
-Este archivo es el complemento 2021-2024 del Catálogo Sismológico de Referencia de Tierra del Fuego, elaborado por instituciones científicas de Argentina y Chile.
-
-Los datos incluyen:
-- Fecha y hora de origen
-- Coordenadas geográficas (latitud y longitud)
-- Profundidad del evento
-- Magnitud local (ML)
-- Calidad del evento y agencia de cálculo
-
-  
+📄 [`data/catalogo_sismico_INPRES_2021_2024.pdf`](data/catalogo_sismico_INPRES_2021_2024.pdf)
 
 ## 🧠 Enfoque del proyecto
 
-1. **Extracción y limpieza de datos** desde PDF (usando `tabula-py`)
-2. **Preprocesamiento**: conversión de tipos, limpieza, creación de variable objetivo (0 = No significativo, 1 = Significativo)
-3. **Exploración y visualización** de datos
-4. **Entrenamiento de modelos**: SVM, Regresión Logística, Random Forest
-5. **Evaluación**: matriz de confusión, accuracy, precision, recall
-6. **Conclusiones y recomendaciones**
+1. **Extracción de datos** desde PDF.
+2. **Limpieza y preprocesamiento** de columnas.
+3. **Creación de variables derivadas** (ciudad más cercana, distancia mínima, temporalidad).
+4. **Análisis exploratorio y visualización**.
+5. **Entrenamiento de modelos** (LogReg, Árboles, KNN, SVM, Random Forest, XGBoost).
+6. **Evaluación con métricas** como accuracy, precision, recall y matriz de confusión.
+7. **Documentación y entrega de resultados**.
 
 ## 🔄 Estado del proyecto
 
-- [x] Extracción del dataset desde PDF
-- [x] Conversión y guardado como Excel
-- [ ] Limpieza y preprocesamiento
-- [ ] Visualización de datos
-- [ ] Modelado y evaluación
-- [ ] Redacción del informe final
+- [x] Extracción de datos desde PDF
+- [x] Limpieza inicial y normalización
+- [x] Cálculo de distancias geográficas
+- [x] Conversión a CSV y carga en repositorio
+- [x] Notebook en desarrollo
+- [ ] Visualizaciones clave
+- [ ] Evaluación de modelos
+- [ ] Informe final completo
+
+## 📝 Documentación
+
+📄 [`reports/Entrega1_Clasificacion_Sismos_TDF_ValeriaVillegas.pdf`](reports/Entrega1_Clasificacion_Sismos_TDF_ValeriaVillegas.pdf)
 
 ## 📌 Próximos pasos
 
-- Eliminar valores faltantes y corregir tipos de datos
-- Crear la variable objetivo binaria basada en ML
-- Aplicar técnicas de visualización geográfica
-- Comparar al menos dos algoritmos de clasificación
-- Documentar los resultados y subir los modelos
+- Completar el análisis exploratorio
+- Comparar al menos 2-3 modelos de clasificación
+- Exportar el modelo final entrenado
+- Desplegar visualizaciones clave (mapas, gráficas)
+- Redactar y subir el informe final
 
 ## 📜 Licencia
 
-Proyecto educativo desarrollado como parte de la cursada de **Aprendizaje Automático** en la Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial – Politécnico Malvinas Argentinas, Tierra del Fuego.
+Proyecto educativo desarrollado en el marco de la materia **Aprendizaje Automático** de la Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial – Politécnico Malvinas Argentinas, Tierra del Fuego.
