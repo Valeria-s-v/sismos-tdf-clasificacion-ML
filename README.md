@@ -1,3 +1,5 @@
+![Clasificación de Sismos](docs/Clasificación%20de%20sismos%20-%20tdf.png)
+
 
 # 🌍 Proyecto de Clasificación Binaria de Sismos en Tierra del Fuego
 
