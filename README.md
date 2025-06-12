@@ -3,7 +3,14 @@
 
 # 🌍 Proyecto de Clasificación Binaria de Sismos en Tierra del Fuego
 
-Este proyecto tiene como objetivo desarrollar un modelo de aprendizaje automático que permita clasificar eventos sísmicos registrados en la región de Tierra del Fuego, Argentina, en dos categorías: **significativos** (percibidos o con impacto) y **no significativos**, a partir de características geográficas y técnicas.
+[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)  
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange)](https://scikit-learn.org/)  
+[![Estado](https://img.shields.io/badge/estado-final-success)]()  
+[![Licencia](https://img.shields.io/badge/licencia-MIT-blue)](LICENSE)
+
+---
+
+Este proyecto de **Machine Learning** tiene como objetivo desarrollar un modelo de aprendizaje automático que permita clasificar eventos sísmicos registrados en la región de Tierra del Fuego, Argentina, en dos categorías: **significativos** (percibidos o con impacto) y **no significativos**, a partir de características geográficas y técnicas.
 
 ## 📌 Objetivo General
 
@@ -28,26 +35,29 @@ Desarrollar un modelo de clasificación binaria capaz de identificar si un event
 - Tabula-py (extracción de PDF)
 - Git y GitHub
 
+Este repositorio incluye:
+- 🧹 Limpieza y transformación de datos crudos.
+- 📊 Exploración y visualización.
+- 🤖 Entrenamiento de modelos: SVM, Regresión Logística y Random Forest.
+- 📈 Evaluación con métricas completas y curvas ROC.
+- 📋 Interpretación: importancia de variables, matriz de confusión.
+- 📂 Organización modular (notebooks, src, modelos, reportes).
+
 ## 📁 Estructura del proyecto
 
 ```
-📦sismos-tdf-clasificacion-ML
- ┣ 📂data
- ┃ ┣ 📄sismos_original.pdf
- ┃ ┣ 📄sismos_completo.xlsx
- ┃ ┗ 📄sismos_completo.csv
- ┣ 📂notebooks
- ┃ ┗ 📄sismos-tdf-clasificacion-ML.ipynb
- ┣ 📂models
- ┃ ┗ 📄modelo_final.pkl
- ┣ 📂reports
- ┃ ┗ 📄Entrega1_Clasificacion_Sismos_TDF_ValeriaVillegas.pdf
- ┣ 📂docs
- ┣ 📂references
- ┣ 📂src
- ┣ 📄README.md
- ┗ 📄requirements.txt
+├── notebooks/           # Notebook principal con workflow completo
+├── src/                 # Módulos en Python (opcional)
+├── models/              # Modelos serializados (joblib/pickle)
+├── docs/                # Imágenes, gráficos, documentación visual
+├── reports/             # Exportaciones PDF de informes
+├── references/          # Fuentes & datos originales
+├── requirements.txt     # Dependencias necesarias
+├── README.md            # Este archivo ✨
+└── LICENSE              # Licencia del proyecto (MIT)
 ```
+
+---
 
 ## 📊 Dataset
 
@@ -57,15 +67,6 @@ Los datos provienen del documento oficial del Instituto Nacional de Prevención 
 
 📄 [`data/catalogo_sismico_INPRES_2021_2024.pdf`](data/catalogo_sismico_INPRES_2021_2024.pdf)
 
-## 🧠 Enfoque del proyecto
-
-1. **Extracción de datos** desde PDF.
-2. **Limpieza y preprocesamiento** de columnas.
-3. **Creación de variables derivadas** (ciudad más cercana, distancia mínima, temporalidad).
-4. **Análisis exploratorio y visualización**.
-5. **Entrenamiento de modelos** (LogReg, Árboles, KNN, SVM, Random Forest, XGBoost).
-6. **Evaluación con métricas** como accuracy, precision, recall y matriz de confusión.
-7. **Documentación y entrega de resultados**.
 
 ## 🔄 Estado del proyecto
 
@@ -74,22 +75,55 @@ Los datos provienen del documento oficial del Instituto Nacional de Prevención 
 - [x] Cálculo de distancias geográficas
 - [x] Conversión a CSV y carga en repositorio
 - [x] Notebook en desarrollo
-- [ ] Visualizaciones clave
-- [ ] Evaluación de modelos
-- [ ] Informe final completo
+- [x] Visualizaciones clave
+- [x] Evaluación de modelos
+- [x] Informe final completo
 
 ## 📝 Documentación
 
 📄 [`reports/Entrega1_Clasificacion_Sismos_TDF_ValeriaVillegas.pdf`](reports/Entrega1_Clasificacion_Sismos_TDF_ValeriaVillegas.pdf)
 
-## 📌 Próximos pasos
+---
 
-- Completar el análisis exploratorio
-- Comparar al menos 2-3 modelos de clasificación
-- Exportar el modelo final entrenado
-- Desplegar visualizaciones clave (mapas, gráficas)
-- Redactar y subir el informe final
+## 🧪 Instalación y ejecución
+
+```bash
+git clone https://github.com/Valeria-s-v/sismos-tdf-clasificacion-ML.git
+cd sismos-tdf-clasificacion-ML
+pip install -r requirements.txt
+
+# Abrí el notebook:
+jupyter notebook notebooks/clasificacion_sismos.ipynb
+```
+
+---
+
+## 📈 Resultados destacados
+
+- ✅ **Random Forest** es el mejor modelo: alta precisión, recall equilibrado, y ROC AUC > 0.9.
+- 🧩 **Importancia de variables**: identificamos los factores más influyentes en la percepción de sismos.
+- 📊 **Curvas ROC comparadas**: ofrecen una visual clara de la capacidad discriminativa de cada modelo para diferentes umbrales.
+- 📉 **Matriz de confusión**: permite evaluar fallos de clasificación en cada clase.
+
+---
+
+## 🧠 Uso práctico
+
+Este proyecto puede ser integrado en proyectos reales de:
+- Sistemas de alerta temprana.
+- Monitoreo de impacto sísmico.
+- Informes geocientíficos y planificación local.
+
+---
+
+## 🧑‍💻 Autora
+
+> **Valeria Villegas** — Estudiante de Ciencia de Datos e IA  
+> Politécnico Malvinas Argentinas, Tierra del Fuego, Argentina 🇦🇷
+
+---
 
 ## 📜 Licencia
 
+Este proyecto está licenciado bajo la Licencia MIT. Ver el archivo [`LICENSE`](LICENSE).
 Proyecto educativo desarrollado en el marco de la materia **Aprendizaje Automático** de la Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial – Politécnico Malvinas Argentinas, Tierra del Fuego.
