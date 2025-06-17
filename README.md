@@ -29,11 +29,11 @@ Desarrollar un modelo de clasificación binaria capaz de identificar si un event
 
 - Python 3.x
 - Google Colab / Jupyter Notebook
-- Pandas, NumPy, Matplotlib, Seaborn
+- Pandas, NumPy, Matplotlib
 - Scikit-learn
-- XGBoost
 - Tabula-py (extracción de PDF)
 - Git y GitHub
+- Cooiecutter
 
 Este repositorio incluye:
 - 🧹 Limpieza y transformación de datos crudos.
@@ -82,7 +82,7 @@ Los datos provienen del documento oficial del Instituto Nacional de Prevención 
 ## 📝 Documentación
 
 📄 [`reports/Entrega1_Clasificacion_Sismos_TDF_ValeriaVillegas.pdf`](reports/Entrega1_Clasificacion_Sismos_TDF_ValeriaVillegas.pdf)
-
+Presentación Video: https://drive.google.com/uc?id=18r_e2r-BnRkCraiaXUz3D0UuLe656jUY&export=download
 ---
 
 ## 🧪 Instalación y ejecución
