@@ -94,9 +94,10 @@ Este catálogo fue procesado con el software SEISAN v12.0, usando el algoritmo H
 ## 📝 Documentación
 
 - 📘 [Ver informe en PDF](reports/Entrega1_Clasificacion_Sismos_TDF_ValeriaVillegas.pdf)  
-- 🎥 [Ver video de presentación](https://drive.google.com/file/d/18r_e2r-BnRkCraiaXUz3D0UuLe656jUY/view?usp=sharing)
 - [📘 Ver reporte final del proyecto (PDF)](reports/Reporte_Clasificación_binaria_Tierra_del_Fuego.pdf)
 - [🎞️ Ver presentación en PowerPoint (PDF)](reports/PowerPoint_del_proyecto.pdf)
+- 🎥 [Ver video de presentación 1 (Abstract)](./Classifying%20earthquakes%20in%20Tierra%20del%20Fuego%20-%20Valeria%20Villegas.mp4)  
+- 🎞️ [Ver video de presentación 2 (Proyecto completo)](./Proyecto%20Clasificación%20Binaria%20de%20Sismos%20en%20TDF%20-%20Valeria%20Villegas%20(1).mp4)
 
 ---
 
