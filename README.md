@@ -43,19 +43,20 @@ Este repositorio incluye:
 - 📋 Interpretación: importancia de variables, matriz de confusión.
 - 📂 Organización modular (notebooks, src, modelos, reportes).
 
+---
+
 ## 📁 Estructura del proyecto
 
-```
-├── notebooks/           # Notebook principal con workflow completo
-├── src/                 # Módulos en Python (opcional)
-├── models/              # Modelos serializados (joblib/pickle)
-├── docs/                # Imágenes, gráficos, documentación visual
-├── reports/             # Exportaciones PDF de informes
-├── references/          # Fuentes & datos originales
-├── requirements.txt     # Dependencias necesarias
-├── README.md            # Este archivo ✨
-└── LICENSE              # Licencia del proyecto (MIT)
-```
+- `data/` 📊: Dataset original y archivos derivados.
+- `docs/` 🖼️: Imagen representativa del proyecto.
+- `models/` 
+- `notebooks/` 📒: Notebook principal del proyecto.
+- `references/` 
+- `reports/` 📝: Entregables (PowerPoint, informe).
+- `src/` 
+- `requirements.txt` 📦: Dependencias de Python.
+- `README.md` ✨: Documentación inicial del proyecto.
+- `LICENSE` 📄: Licencia MIT del proyecto.
 
 ---
 
