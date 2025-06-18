@@ -14,7 +14,9 @@ Este proyecto de **Machine Learning** tiene como objetivo desarrollar un modelo 
 
 ## 📌 Objetivo General
 
-Desarrollar un modelo de clasificación binaria capaz de identificar si un evento sísmico puede ser percibido por la población o tener impacto, utilizando variables como magnitud, profundidad, distancia a centros urbanos y características temporales.
+El objetivo principal fue construir un modelo de clasificación binaria que permita predecir si un evento sísmico puede ser percibido por la población, combinando información geográfica y técnica del sismo.
+
+La motivación detrás de este trabajo radica en la necesidad de anticipar eventos relevantes en una región con actividad sísmica baja pero con potencial de impacto. Un sistema así puede contribuir a mejorar la comunicación del riesgo y la planificación preventiva.
 
 ## 🎯 Objetivos Específicos
 
@@ -41,7 +43,7 @@ Este repositorio incluye:
 - 🤖 Entrenamiento de modelos: SVM, Regresión Logística y Random Forest.
 - 📈 Evaluación con métricas completas y curvas ROC.
 - 📋 Interpretación: importancia de variables, matriz de confusión.
-- 📂 Organización modular (notebooks, src, modelos, reportes).
+- 📂 Organización modular.
 
 ---
 
@@ -62,8 +64,17 @@ Este repositorio incluye:
 
 ## 📊 Dataset
 
-Los datos provienen del documento oficial del Instituto Nacional de Prevención Sísmica (INPRES), complementado con cálculos geográficos y variables derivadas para enriquecer el análisis.
+Se utilizó el Catálogo Sismológico de Referencia de Tierra del Fuego – Complemento 2021–2024, elaborado por:
 
+Estación Astronómica Río Grande
+
+Facultad de Ciencias Astronómicas y Geofísicas de la UNLP
+
+CONICET
+
+Red Sismológica Nacional de Chile
+
+Este catálogo fue procesado con el software SEISAN v12.0, usando el algoritmo HYPOCENTER, reconocido internacionalmente para la localización de sismos.
 ### Fuente:
 
 📄 [`data/catalogo_sismico_INPRES_2021_2024.pdf`](data/catalogo_sismico_INPRES_2021_2024.pdf)
@@ -89,25 +100,38 @@ Los datos provienen del documento oficial del Instituto Nacional de Prevención 
 
 ---
 
-## 🧪 Instalación y ejecución
-
-```bash
-git clone https://github.com/Valeria-s-v/sismos-tdf-clasificacion-ML.git
-cd sismos-tdf-clasificacion-ML
-pip install -r requirements.txt
-
-# Abrí el notebook:
-jupyter notebook notebooks/clasificacion_sismos.ipynb
-```
-
----
-
 ## 📈 Resultados destacados
 
 - ✅ **Random Forest** es el mejor modelo: alta precisión, recall equilibrado, y ROC AUC > 0.9.
 - 🧩 **Importancia de variables**: identificamos los factores más influyentes en la percepción de sismos.
 - 📊 **Curvas ROC comparadas**: ofrecen una visual clara de la capacidad discriminativa de cada modelo para diferentes umbrales.
 - 📉 **Matriz de confusión**: permite evaluar fallos de clasificación en cada clase.
+
+---
+✅ Conclusiones
+El proyecto demostró que, aún con un dataset desbalanceado y limitado, es posible construir un modelo predictivo útil para anticipar eventos sísmicos percibidos.
+
+Random Forest fue el modelo más eficaz, logrando un buen ROC AUC (0.861) y capacidad parcial para detectar la clase minoritaria.
+
+El accuracy, por sí solo, no fue un buen indicador del desempeño, especialmente en este caso con clases desbalanceadas.
+
+Este modelo puede tener un potencial aporte a la gestión del riesgo en regiones como Tierra del Fuego, donde los sismos no son frecuentes pero sí relevantes.
+
+---
+🚀 Trabajo Futuro
+Algunas líneas de mejora y expansión del proyecto:
+
+Aplicar técnicas de balanceo como SMOTE o ADASYN para mejorar la detección de eventos percibidos
+
+Incluir nuevas variables como:
+
+Tipo de suelo
+
+Duración del evento
+
+Densidad poblacional
+
+Intensidad instrumental
 
 ---
 
