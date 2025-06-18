@@ -82,10 +82,10 @@ Los datos provienen del documento oficial del Instituto Nacional de Prevención 
 
 ## 📝 Documentación
 
-📘 [Ver informe en PDF](reports/Entrega1_Clasificacion_Sismos_TDF_ValeriaVillegas.pdf)  
-🎥 [Ver video de presentación](https://drive.google.com/file/d/18r_e2r-BnRkCraiaXUz3D0UuLe656jUY/view?usp=sharing)
-
-
+- 📘 [Ver informe en PDF](reports/Entrega1_Clasificacion_Sismos_TDF_ValeriaVillegas.pdf)  
+- 🎥 [Ver video de presentación](https://drive.google.com/file/d/18r_e2r-BnRkCraiaXUz3D0UuLe656jUY/view?usp=sharing)
+- [📘 Ver reporte final del proyecto (PDF)](reports/Reporte_Clasificación_binaria_Tierra_del_Fuego.pdf)
+- [🎞️ Ver presentación en PowerPoint (PDF)](reports/PowerPoint_del_proyecto.pdf)
 
 ---
 
